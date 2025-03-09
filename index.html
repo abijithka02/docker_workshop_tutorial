@@ -96,18 +96,21 @@
     <pre>$ docker pull python</pre>
     
     <h3>3. Run a Python Container</h3>
-    <pre>$ docker run -it --name python-container python</pre>
+    <pre>$ docker run -dit --name my_python_container python:latest bash</pre>
+
+    <h3>4. To get inside the container</h3>
+    <pre>$ docker exec -it my_python_container bash</pre>
     
-    <h3>4. Verify Python Installation inside Container</h3>
+    <h3>5. Verify Python Installation inside Container</h3>
     <pre># python --version</pre>
     
-    <h3>5. Create a Python Script (inside the container)</h3>
+    <h3>6. Create a Python Script (inside the container)</h3>
     <pre># echo 'print("Hello, Docker!")' > script.py</pre>
     
-    <h3>6. Run the Python Script</h3>
+    <h3>7. Run the Python Script</h3>
     <pre># python script.py</pre>
     
-    <h3>7. Exit the Container</h3>
+    <h3>8. Exit the Container</h3>
     <pre># exit</pre>
 </body>
 </html>
