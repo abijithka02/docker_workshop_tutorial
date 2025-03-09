@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Unleashed Workshop - Abijith K A</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #ecf0f1;
+            text-align: center;
+        }
+        h1 {
+            font-size: 42px;
+            color: #f1c40f;
+            animation: fadeIn 2s;
+            text-transform: uppercase;
+        }
+        h2 {
+            color: #e74c3c;
+            animation: slideIn 1.5s;
+            font-weight: bold;
+        }
+        p, ul, pre {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 2s;
+        }
+        pre {
+            background: #2c3e50;
+            color: #1abc9c;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #34495e;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Docker Unleashed Workshop</h1>
+    <h2>By Abijith K A</h2>
+    
+    <h2>What is Docker?</h2>
+    <p>Docker is an open-source platform for developing, shipping, and running applications in lightweight, portable containers.</p>
+    
+    <h2>Why Use Docker?</h2>
+    <ul>
+        <li>Ensures consistency across different environments.</li>
+        <li>Efficient resource utilization.</li>
+        <li>Rapid application deployment.</li>
+        <li>Easy dependency management.</li>
+    </ul>
+    
+    <h2>What is Docker Hub?</h2>
+    <p>Docker Hub is a cloud-based registry that allows you to find and share container images.</p>
+    
+    <h2>Steps to Pull and Execute a Python Program using Docker</h2>
+    
+    <h3>1. Verify Docker Installation</h3>
+    <pre>$ docker --version</pre>
+    
+    <h3>2. Pull the Python Image</h3>
+    <pre>$ docker pull python</pre>
+    
+    <h3>3. Run a Python Container</h3>
+    <pre>$ docker run -it --name python-container python</pre>
+    
+    <h3>4. Verify Python Installation inside Container</h3>
+    <pre># python --version</pre>
+    
+    <h3>5. Create a Python Script (inside the container)</h3>
+    <pre># echo 'print("Hello, Docker!")' > script.py</pre>
+    
+    <h3>6. Run the Python Script</h3>
+    <pre># python script.py</pre>
+    
+    <h3>7. Exit the Container</h3>
+    <pre># exit</pre>
+</body>
+</html>
